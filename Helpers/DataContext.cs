@@ -19,7 +19,5 @@ namespace SpaceBlogBackend.Helpers
             // in memory database used for simplicity, change to a real db for production applications
             options.UseNpgsql(Configuration.GetConnectionString("postgresDatabase"));
         }
-
-        public DbSet<GamerBlog> GamerBlogs { get; set; }
     }
 }

@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SpaceBlogBackend.Controllers;
+using SpaceBlogBackend.DAL;
 
 namespace SpaceBlogBackend
 {
@@ -15,6 +17,7 @@ namespace SpaceBlogBackend
         public static void Main(string[] args)
         {
             var builder = new ContainerBuilder();
+            builder.RegisterType<GamerBlogController>();
 
             builder.Build();
 
